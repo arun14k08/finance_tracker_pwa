@@ -9,7 +9,7 @@ export default function App() {
         // add bg and text color using tailwind
         <>
             <div className="h-screen">
-                <Toaster richColors position="bottom-center" />
+                <Toaster richColors position="bottom-center" closeButton />
                 <RouterProvider router={router} />
             </div>
         </>
