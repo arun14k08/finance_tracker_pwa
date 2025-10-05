@@ -5,7 +5,7 @@ import { Navigate, Outlet } from "react-router-dom";
 const PublicRoute = () => {
     const auth = useContext(AuthContext);
     if (auth?.user && auth?.user.token) {
-        return <Navigate to="/home" replace />;
+        return <Navigate to="/home/dashboard" replace />;
     }
 
     return <Outlet />;

@@ -1,16 +1,19 @@
-import LogoutButton from "@/components/custom/LogoutButton";
-import { TabsContent } from "@radix-ui/react-tabs";
+import { ProfileSettings } from "./ProfileSettings";
+import { ProfileHeader } from "./Profileheader";
 
 const Profile = () => {
     return (
         <>
-            <TabsContent
-                value="profile"
-                className="w-full flex flex-col justify-center items-center flex-1"
+            <div
+                className="w-full flex flex-col flex-1"
             >
-                <div>Profile</div>
-                <LogoutButton />
-            </TabsContent>
+                <main className="pb-24">
+                    <section className="mx-auto max-w-md space-y-4 p-4">
+                        <ProfileHeader name="Your Name" email="you@example.com" />
+                        <ProfileSettings />
+                    </section>
+                </main>
+            </div>
         </>
     );
 };
