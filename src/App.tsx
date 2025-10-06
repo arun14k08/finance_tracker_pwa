@@ -9,7 +9,9 @@ export default function App() {
         // add bg and text color using tailwind
         <>
             <div className="h-screen">
-                <Toaster richColors position="bottom-center" closeButton />
+                <Toaster richColors position="top-right" closeButton visibleToasts={3} mobileOffset={{ left: "4rem" }} swipeDirections={
+                ["right","left"]
+                } />
                 <RouterProvider router={router} />
             </div>
         </>

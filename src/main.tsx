@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App.tsx";
 import { ConfigProvider } from "./context/ConfigContext.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx";
+import { CacheProvider } from "./context/LocalCacheContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <AuthProvider>
             <ConfigProvider>
-                <App />
+                <CacheProvider>
+                    <App />
+                </CacheProvider>
             </ConfigProvider>
         </AuthProvider>
     </StrictMode>
